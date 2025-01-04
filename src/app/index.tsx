@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import {router} from "expo-router";
-
+import {router,Link} from "expo-router";
 
 //Este é o entrypoint de nossa aplicação
 export default function Index() {
@@ -19,6 +18,15 @@ export default function Index() {
                 </Text>
             </TouchableOpacity>
 
+            <Link href={{
+                pathname:"/signup",
+                params:{
+                    name:'Bernardo'
+                }
+            }}>
+                Enviar Parâmetro
+            </Link>
+
         </View>
     )
 }
@@ -27,7 +35,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        gap:32
     },
     title: {
         fontSize: 22,

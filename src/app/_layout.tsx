@@ -1,13 +1,21 @@
-import { Slot } from "expo-router";
+import { Stack } from "expo-router";
 import { View } from "react-native";
 
 
-export default function Layout(){
+export default function Layout() {
     return (
-        <View style={{flex:1}}>
-            <View style={{width:'100%', height:40, backgroundColor:'#000'}} />
-            <Slot/>
-            <View style={{width:'100%', height:40, backgroundColor:'#c3c3c3'}} />
-        </View>
+        <Stack
+            screenOptions={{
+                headerShown: false
+            }} >
+
+            <Stack.Screen name="index" options={{ title: 'Entrar' }} />
+            <Stack.Screen name="signup" options={{ title: 'Criar Conta' }} />
+        </Stack>
     )
 }
+
+//Existe a possibilidade de configurar a navegação somente repassando 
+//o tipo de navegador desejado
+
+//export default Stack
