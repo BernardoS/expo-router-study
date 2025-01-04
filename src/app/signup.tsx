@@ -7,7 +7,7 @@ export default function SignUp() {
 
     function back() {
 
-        if(router.canGoBack()){
+        if(!router.canGoBack()){
             return Alert.alert("Não é possível voltar a página")
         }
 
