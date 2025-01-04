@@ -31,6 +31,10 @@ export default function Index() {
                 Abrir Produto
             </Link>
 
+            <Link href={{pathname:'/home',params:{id:7}}}>
+                Abrir Home
+            </Link>
+
         </View>
     )
 }
