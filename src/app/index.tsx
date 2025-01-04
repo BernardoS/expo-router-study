@@ -27,6 +27,10 @@ export default function Index() {
                 Enviar Parâmetro
             </Link>
 
+            <Link href="/product/12">
+                Abrir Produto
+            </Link>
+
         </View>
     )
 }
